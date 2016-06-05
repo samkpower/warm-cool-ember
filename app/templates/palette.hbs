@@ -18,11 +18,28 @@
     </div>
 
     <div class='pure-u-2-3'>
-      {{palette-steps/luminosity}}
-      {{palette-steps/temperature}}
-      {{palette-steps/intensity}}
-      {{palette-steps/highlight}}
-      {{palette-steps/demo palette=palette}}
-      {{palette-steps/permalink palette=palette}}
+      {{#palette-steps/step stepClassName='luminosity'}}
+        {{palette-steps/luminosity}}
+      {{/palette-steps/step}}
+
+      {{#palette-steps/step stepClassName='temperature'}}
+        {{palette-steps/temperature}}
+      {{/palette-steps/step}}
+
+      {{#palette-steps/step stepClassName='intensity'}}
+        {{palette-steps/intensity}}
+      {{/palette-steps/step}}
+
+      {{#palette-steps/step stepClassName='highlight'}}
+        {{palette-steps/highlight}}
+      {{/palette-steps/step}}
+
+      {{#palette-steps/step stepClassName='demo'}}
+        {{palette-steps/demo}}
+      {{/palette-steps/step}}
+
+      {{#palette-steps/step stepClassName='permalink'}}
+        {{palette-steps/permalink}}
+      {{/palette-steps/step}}
     </div>
 </div>
