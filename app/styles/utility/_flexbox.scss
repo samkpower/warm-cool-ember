@@ -1,6 +1,13 @@
 /////////////////////////////
 // Vertical Centering
 /////////////////////////////
+.u-vertically-centered {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-around;
+}
 
 .u-vertically-centered--double {
   display: inline-flex !important;

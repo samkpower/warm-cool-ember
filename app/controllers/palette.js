@@ -22,6 +22,15 @@ export default Ember.Controller.extend({
     goToStep(stepName) {
       this.set('step', stepName);
       this._scrollToStep(stepName);
+    },
+    setIntensity(value) {
+      this.set('intensity', value);
+    },
+    setLuminosity(value) {
+      this.set('luminosity', value);
+    },
+    setTemperature(value) {
+      this.set('temperature', value);
     }
   }
 });

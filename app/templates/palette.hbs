@@ -12,34 +12,58 @@
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'demo'}}>Demo</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'permalink'}}>Permalink</a></li>
               </ul>
+              <span class='pure-menu-heading'>{{luminosity}} - {{intensity}} - {{temperature}}</span>
           </div>
         </div>
       </div>
     </div>
 
     <div class='pure-u-2-3'>
-      {{#palette-steps/step stepClassName='luminosity'}}
-        {{palette-steps/luminosity}}
-      {{/palette-steps/step}}
+      {{#palette-step stepClassName='luminosity'}}
+        <p>Choose luminosity:</p>
+        <a class='pure-button' {{action 'setLuminosity' 'light'}}>Light</a>
+        <a class='pure-button' {{action 'setLuminosity' 'dark'}}>Dark</a>
+      {{/palette-step}}
 
-      {{#palette-steps/step stepClassName='temperature'}}
-        {{palette-steps/temperature}}
-      {{/palette-steps/step}}
+      {{#palette-step stepClassName='temperature'}}
+        <p>Choose temperature:</p>
+        <a class='pure-button' {{action 'setTemperature' 'warm'}}>Warm</a>
+        <a class='pure-button' {{action 'setTemperature' 'cool'}}>Cool</a>
+      {{/palette-step}}
 
-      {{#palette-steps/step stepClassName='intensity'}}
-        {{palette-steps/intensity}}
-      {{/palette-steps/step}}
+      {{#palette-step stepClassName='intensity'}}
+        <p>Choose intensity:</p>
+        <a class='pure-button' {{action 'setIntensity' 'bold'}}>Bold</a>
+        <a class='pure-button' {{action 'setIntensity' 'muted'}}>Muted</a>
+      {{/palette-step}}
 
-      {{#palette-steps/step stepClassName='highlight'}}
-        {{palette-steps/highlight}}
-      {{/palette-steps/step}}
+      {{#palette-step stepClassName='highlight'}}
+        <p>Choose highlight color:</p>
+        {{color-swatch swatchColor='blue'}}
+        {{color-swatch swatchColor='yellow'}}
+        {{color-swatch swatchColor='green'}}
+        {{color-swatch swatchColor='red'}}
+        {{color-swatch swatchColor='purple'}}
+        {{color-swatch swatchColor='orange'}}
+      {{/palette-step}}
 
-      {{#palette-steps/step stepClassName='demo'}}
-        {{palette-steps/demo}}
-      {{/palette-steps/step}}
+      {{#palette-step stepClassName='demo' palette=palette}}
+        <p>Here's what it looks like:</p>
+        <div class='pure-u-1' style='background-color:{{palette.bg}}; padding: 20px;'>
+          <h1 style='color:{{palette.textPrimary}}'>Article</h1>
+          <hr style='border-color:{{palette.highlightSecondary}}'>
+          <p style='color:{{palette.textPrimary}}'>Here's some text you asked for.</p>
+          <a style='color:{{palette.highlightPrimary}}'>Link</a>
+        </div>
+      {{/palette-step}}
 
-      {{#palette-steps/step stepClassName='permalink'}}
-        {{palette-steps/permalink}}
-      {{/palette-steps/step}}
+      {{#palette-step stepClassName='permalink' palette=palette}}
+        <p>Here is your palette:</p>
+        {{color-swatch swatchColor=palette.bg}}
+        {{color-swatch swatchColor=palette.highlightPrimary}}
+        {{color-swatch swatchColor=palette.highlightSecondary}}
+        {{color-swatch swatchColor=palette.textPrimary}}
+        {{color-swatch swatchColor=palette.textSecondary}}
+      {{/palette-step}}
     </div>
 </div>
