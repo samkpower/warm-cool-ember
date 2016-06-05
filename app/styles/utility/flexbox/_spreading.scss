@@ -1,0 +1,30 @@
+/////////////////////////////
+// Horizontal
+/////////////////////////////
+
+.u-horizontally-spread {
+  display: flex; // Inline-flex unfortunately doesn't work with IE11 when the children have a min-width. The checkout form will break if this is changed to inline-flex
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -20px; // needed to neutralize the margin-bottom of the __items
+}
+
+.u-horizontally-spread__item {
+  margin-bottom: 20px;
+}
+
+/////////////////////////////
+// Vertical
+/////////////////////////////
+
+.u-vertically-spread {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.u-vertically-spread__item {
+  // Nothing needed here yet
+}

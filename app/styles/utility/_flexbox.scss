@@ -1,0 +1,59 @@
+/////////////////////////////
+// Vertical Centering
+/////////////////////////////
+
+.u-vertically-centered--double {
+  display: inline-flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.u-vertically-centered--single {
+  display: inline-flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/////////////////////////////
+// Changing alignment
+/////////////////////////////
+
+.u-cross-axis-right-aligned {
+  justify-content: flex-end !important;
+}
+
+.u-cross-axis-center-aligned {
+  justify-content: center !important;
+}
+
+.u-main-axis-center-aligned {
+  align-items: center !important;
+}
+
+.u-main-axis-baseline-aligned {
+  align-items: baseline !important;
+}
+
+.u-main-axis-flex-start-aligned {
+  align-items: flex-start !important;
+}
+
+/////////////////////////////
+// Miscellaneous
+/////////////////////////////
+
+.u-flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.u-flex-1 {
+  flex: 1;
+}
+
+.u-display-flex {
+  display: flex;
+}
+
+.u-inline-flex {
+  display: inline-flex !important;
+}

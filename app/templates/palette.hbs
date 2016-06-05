@@ -1,59 +1,28 @@
-<div class='pure-g'>
-    <div class='pure-u-1-3'>
-      <div class='pure-menu custom-restricted-width'>
-          <span class='pure-menu-heading'>Palette</span>
-          <ul class='pure-menu-list'>
-              <li class='pure-menu-item'>{{link-to 'Luminosity' 'palette' (query-params step='luminosity') classNames='pure-menu-link'}}</li>
-              <li class='pure-menu-item'>{{link-to 'Temperature' 'palette' (query-params step='temperature') classNames='pure-menu-link'}}</li>
-              <li class='pure-menu-item'>{{link-to 'Intensity' 'palette' (query-params step='intensity') classNames='pure-menu-link'}}</li>
-              <li class='pure-menu-item'>{{link-to 'Highlight' 'palette' (query-params step='highlight') classNames='pure-menu-link'}}</li>
-              <li class='pure-menu-item'>{{link-to 'Demo' 'palette' (query-params step='demo') classNames='pure-menu-link'}}</li>
-              <li class='pure-menu-item'>{{link-to 'Permalink' 'palette' (query-params step='permalink') classNames='pure-menu-link'}}</li>
-          </ul>
+<div class='pure-g l-spa'>
+    <div class='pure-u-1-3 l-nav'>
+      <div class='u-vertically-spread l-nav__vertical-menu'>
+        <div class='u-vertically-spread__item'>
+          <div class='pure-menu'>
+              <span class='pure-menu-heading'>Palette</span>
+              <ul class='pure-menu-list'>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'luminosity'}}>Luminosity</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'temperature'}}>Temperature</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'intensity'}}>Intensity</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'highlight'}}>Highlight</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'demo'}}>Demo</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'permalink'}}>Permalink</a></li>
+              </ul>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class='pure-u-2-3'>
-      <div class='js-luminosity'>
-        <p>Choose dark/light:</p>
-        {{link-to 'Dark' 'palette' (query-params luminosity='dark') classNames='pure-button'}}
-        {{link-to 'Light' 'palette' (query-params luminosity='light') classNames='pure-button'}}
-      </div>
-
-      <div class='js-temperature'>
-        <p>Choose warm/cool:</p>
-        {{link-to 'Warm' 'palette' (query-params temperature='warm') classNames='pure-button'}}
-        {{link-to 'Cool' 'palette' (query-params temperature='cool') classNames='pure-button'}}
-      </div>
-
-      <div class='js-intensity'>
-        <p>Choose intensity:</p>
-        {{link-to 'Bold' 'palette' (query-params intensity='bold') classNames='pure-button'}}
-        {{link-to 'Muted' 'palette' (query-params intensity='muted') classNames='pure-button'}}
-      </div>
-
-      <div class='js-highlight'>
-        <p>Choose highlight color:</p>
-        {{link-to 'Blue' 'palette' (query-params highlight='blue') classNames='pure-button'}}
-        {{link-to 'Green' 'palette' (query-params highlight='green') classNames='pure-button'}}
-        {{link-to 'Red' 'palette' (query-params highlight='red') classNames='pure-button'}}
-        {{link-to 'Purple' 'palette' (query-params highlight='purple') classNames='pure-button'}}
-        {{link-to 'Orange' 'palette' (query-params highlight='orange') classNames='pure-button'}}
-        {{link-to 'Yellow' 'palette' (query-params highlight='yellow') classNames='pure-button'}}
-      </div>
-
-      <div class='js-demo'>
-        <p>Here's what it looks like:</p>
-        <div class='pure-u-1' style='background-color:{{paletteBg}}; padding: 20px;'>
-          <h1 style='color:{{paletteTextPrimary}}'>Article</h1>
-          <hr style='border-color:{{paletteHighlightSecondary}}'>
-          <p style='color:{{paletteTextPrimary}}'>Here's some text you asked for.</p>
-          <a style='color:{{paletteHighlightPrimary}}'>Link</a>
-        </div>
-      </div>
-
-      <div class='js-permalink'>
-        <p>Here is everything you need to use these colours:</p>
-      </div>
+      {{palette-steps/luminosity}}
+      {{palette-steps/temperature}}
+      {{palette-steps/intensity}}
+      {{palette-steps/highlight}}
+      {{palette-steps/demo palette=palette}}
+      {{palette-steps/permalink palette=palette}}
     </div>
 </div>

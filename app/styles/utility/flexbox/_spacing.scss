@@ -1,0 +1,129 @@
+/////////////////////////////
+// Horizontal
+/////////////////////////////
+
+.u-horizontally-spaced {
+  display: inline-flex !important;
+
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: -10px;
+  margin-bottom: -20px; // needed to neutralize the margin-bottom of the __items
+  margin-left: -10px;
+
+  > .u-horizontally-spaced__item {
+    margin: 0 10px 20px; // margin-bottom is needed for when items wrap (eg on pricing page mobile view)
+  }
+}
+
+
+.u-horizontally-spaced--wide {
+  margin-right: -15px;
+  margin-left: -15px;
+
+  > .u-horizontally-spaced__item {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+/////////////////////////////
+// Vertical
+/////////////////////////////
+
+.u-vertically-spaced {
+  display: flex !important; // if inline-flex, IE11 will have problems - see AP-1833
+  flex-direction: column;
+
+  > .u-vertically-spaced__item {
+    max-width: 100%; // Fix for IE11 Flexbox bug: https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.u-vertically-spaced__item--with-extra-space-below {
+      margin-bottom: 10px;
+    }
+
+    &.u-vertically-spaced__item--with-extra-space-above {
+      margin-top: 10px;
+    }
+  }
+}
+
+/////////////////////////////
+// Vertical - Narrow
+/////////////////////////////
+
+.u-vertically-spaced--narrow {
+  > .u-vertically-spaced__item {
+    margin: 5px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/////////////////////////////
+// Vertical - Very Narrow
+/////////////////////////////
+
+.u-vertically-spaced--very-narrow {
+  > .u-vertically-spaced__item {
+    margin: 2.5px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+/////////////////////////////
+// Vertical - Wide
+/////////////////////////////
+
+.u-vertically-spaced--wide {
+  > .u-vertically-spaced__item {
+    margin: 15px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/////////////////////////////
+// Vertical - Very Wide
+/////////////////////////////
+
+.u-vertically-spaced--very-wide {
+  > .u-vertically-spaced__item {
+    margin: 20px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

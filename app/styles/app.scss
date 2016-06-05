@@ -1,0 +1,27 @@
+@import 'blocks/b-card';
+
+@import 'utility/flexbox';
+@import 'utility/flexbox/spacing';
+@import 'utility/flexbox/spreading';
+
+.l-spa {
+  height: 100vh;
+  width: 100vw;
+}
+
+.l-nav {
+  height: 100vh;
+}
+
+.l-nav__vertical-menu {
+  position: fixed;
+  justify-content: space-around;
+}
+
+.l-step {
+  height: 100vh;
+}
+
+p {
+  margin: 0;
+}
