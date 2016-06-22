@@ -1,0 +1,88 @@
+/////////////////////////////
+// Base
+////////////////////////////
+
+$font-weight-bold: 800;
+$font-weight-semi-bold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 200;
+
+/////////////////////////////
+// Weight
+////////////////////////////
+
+.f-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
+.f-weight-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+.f-weight-normal {
+  font-weight: $font-weight-normal;
+}
+
+.f-weight-light {
+  font-weight: $font-weight-light;
+}
+
+/////////////////////////////
+// text-align
+////////////////////////////
+
+.f-align-left {
+  text-align: left;
+}
+
+.f-align-center {
+  text-align: center;
+}
+
+.f-align-right {
+  text-align: right;
+}
+
+.f-uppercase {
+  text-transform: uppercase;
+}
+
+/////////////////////////////
+// Relative Size Font System
+////////////////////////////
+
+.f-relative-size {
+  font-size: 16px;
+}
+
+.f-relative-size--small {
+  font-size: 14px;
+}
+
+.f-relative-size--big {
+  font-size: 20px;
+}
+
+.f-relative-size__p {
+  font-size: 1em;
+}
+
+.f-relative-size__h1 {
+  font-size: 2em;
+}
+
+.f-relative-size__h2 {
+  font-size: 1.75em;
+}
+
+.f-relative-size__h3 {
+  font-size: 1.5em;
+}
+
+.f-relative-size__h4 {
+  font-size: 1.25em;
+}
+
+.f-relative-size__mini {
+  font-size: 0.8em;
+}

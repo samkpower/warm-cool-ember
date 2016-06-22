@@ -1,5 +1,7 @@
 @import 'blocks/b-card';
 
+@import 'fonts';
+
 @import 'utility/flexbox';
 @import 'utility/flexbox/spacing';
 @import 'utility/flexbox/spreading';
@@ -24,6 +26,10 @@
 
 .l-step__body {
   display: block;
+}
+
+.u-padding {
+  padding: 30px;
 }
 
 p {

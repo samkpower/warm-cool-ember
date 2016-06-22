@@ -5,24 +5,24 @@
           <div class='pure-menu'>
               <span class='pure-menu-heading'>Palette</span>
               <ul class='pure-menu-list'>
-                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'luminosity'}}>Luminosity</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'contrast'}}>Contrast</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'temperature'}}>Temperature</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'intensity'}}>Intensity</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'highlight'}}>Highlight</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'demo'}}>Demo</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'permalink'}}>Permalink</a></li>
               </ul>
-              <span class='pure-menu-heading'>{{luminosity}} - {{intensity}} - {{temperature}}</span>
+              <span class='pure-menu-heading'>{{contrast}} - {{intensity}} - {{temperature}}</span>
           </div>
         </div>
       </div>
     </div>
 
     <div class='pure-u-2-3'>
-      {{#palette-step stepClassName='luminosity'}}
-        <p>Choose luminosity:</p>
-        <a class='pure-button' {{action 'setLuminosity' 'light'}}>Light</a>
-        <a class='pure-button' {{action 'setLuminosity' 'dark'}}>Dark</a>
+      {{#palette-step stepClassName='contrast'}}
+        <p>Choose contrast:</p>
+        <a class='pure-button' {{action 'setContrast' 'high'}}>High</a>
+        <a class='pure-button' {{action 'setContrast' 'low'}}>Low</a>
       {{/palette-step}}
 
       {{#palette-step stepClassName='temperature'}}
@@ -48,12 +48,29 @@
       {{/palette-step}}
 
       {{#palette-step stepClassName='demo' palette=palette}}
-        <p>Here's what it looks like:</p>
-        <div class='pure-u-1' style='background-color:{{palette.bg}}; padding: 20px;'>
-          <h1 style='color:{{palette.textPrimary}}'>Article</h1>
-          <hr style='border-color:{{palette.highlightSecondary}}'>
-          <p style='color:{{palette.textPrimary}}'>Here's some text you asked for.</p>
-          <a style='color:{{palette.highlightPrimary}}'>Link</a>
+        <div class='pure-u-1' style='background-color:{{palette.bg}}; height: 100vh;'>
+          <div class='u-vertically-centered'>
+            <div class='u-padding'>
+              <h1 style='color:{{palette.textPrimary}}'>Demo</h1>
+              <hr style='border-color:{{palette.highlightSecondary}}'>
+              <p style='color:{{palette.textPrimary}}'>
+                Stumptown kogi banh mi bespoke asymmetrical.
+                Banjo yr quinoa roof party, sriracha <a style='color:{{palette.highlightPrimary}}'>pabst humblebrag irony</a> butcher lumbersexual chicharrones brunch.
+                Gastropub craft beer meh, authentic lomo XOXO cliche banh mi.
+                Mlkshk bushwick four dollar toast kickstarter bicycle rights brooklyn.
+              </p>
+              <br>
+              <p style='color:{{palette.textPrimary}}'>
+                Raw denim heirloom ennui, lo-fi yuccie cold-pressed listicle.
+                You probably haven't heard of them <a style='color:{{palette.highlightPrimary}}'>hashtag keffiyeh shoreditch</a>.
+                IPhone pinterest master cleanse shoreditch banjo, roof party neutra.
+                Selfies leggings etsy +1 retro, kinfolk taxidermy normcore
+              </p>
+              <br>
+              <button class='pure-button' style='background-color:{{palette.highlightPrimary}}'>Kale chips NOW</button>
+              <button class='pure-button' style='background-color:{{palette.textPrimary}}'>Kale chips LATER</button>
+            </div>
+          </div>
         </div>
       {{/palette-step}}
 
