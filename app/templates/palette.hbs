@@ -11,6 +11,7 @@
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'highlight'}}>Highlight</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'demo'}}>Demo</a></li>
                   <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'permalink'}}>Permalink</a></li>
+                  <li class='pure-menu-item'><a class='pure-menu-link' {{action 'goToStep' 'experiment'}}>Experiment</a></li>
               </ul>
               <span class='pure-menu-heading'>{{contrast}} - {{intensity}} - {{temperature}}</span>
           </div>
@@ -83,6 +84,15 @@
         {{color-swatch swatchColor=defaultPalette.tertiary}}
         {{color-swatch swatchColor=defaultPalette.accent}}
         {{color-swatch swatchColor=defaultPalette.neutral}}
+      {{/palette-step}}
+
+      {{#palette-step stepClassName='experiment' palette=palette}}
+        <p>Experimental Stuff</p>
+        {{layered-swatch swatchColor=defaultPalette.primary}}
+        <!-- {{layered-swatch swatchColor=defaultPalette.secondary}}
+        {{layered-swatch swatchColor=defaultPalette.tertiary}}
+        {{layered-swatch swatchColor=defaultPalette.accent}}
+        {{layered-swatch swatchColor=defaultPalette.neutral}} -->
       {{/palette-step}}
     </div>
 </div>

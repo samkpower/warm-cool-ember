@@ -1,0 +1,15 @@
+.b-swatch-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.b-swatch-group--vertical {
+  height: 100vh;
+}
+
+.b-swatch-group--horizontal {
+  width: 100vh;
+}
+
+.b-swatch-group__swatch {
+}
