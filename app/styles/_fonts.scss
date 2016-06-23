@@ -1,11 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
 /////////////////////////////
 // Base
 ////////////////////////////
+
+$primary-font-family: 'Lato', sans-serif;
 
 $font-weight-bold: 800;
 $font-weight-semi-bold: 600;
 $font-weight-normal: 400;
 $font-weight-light: 200;
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: $primary-font-family;
+}
 
 /////////////////////////////
 // Weight

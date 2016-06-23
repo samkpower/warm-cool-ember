@@ -18,11 +18,11 @@ export default Ember.Controller.extend({
 
   palette: Ember.computed('defaultPalette', function(){
     return {
-      bg: this.get('defaultPalette.darkSecondary'),
-      textPrimary: this.get('defaultPalette.darkPrimary'),
-      textSecondary: this.get('defaultPalette.darkSecondary'),
+      bg: this.get('defaultPalette.neutral'),
+      textPrimary: this.get('defaultPalette.primary'),
+      textSecondary: this.get('defaultPalette.secondary'),
       highlightPrimary: this.get('defaultPalette.accent'),
-      highlightSecondary: this.get('defaultPalette.darkTertiary')
+      highlightSecondary: this.get('defaultPalette.tertiary')
     }
   }),
 

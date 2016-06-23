@@ -39,12 +39,12 @@
 
       {{#palette-step stepClassName='highlight'}}
         <p>Choose highlight color:</p>
-        {{color-swatch swatchColor='blue'}}
-        {{color-swatch swatchColor='yellow'}}
-        {{color-swatch swatchColor='green'}}
-        {{color-swatch swatchColor='red'}}
-        {{color-swatch swatchColor='purple'}}
-        {{color-swatch swatchColor='orange'}}
+        {{color-swatch swatchColor='#F44336'}}
+        {{color-swatch swatchColor='#E91E63'}}
+        {{color-swatch swatchColor='#9C27B0'}}
+        {{color-swatch swatchColor='#673AB7'}}
+        {{color-swatch swatchColor='#3F51B5'}}
+        {{color-swatch swatchColor='#2196F3'}}
       {{/palette-step}}
 
       {{#palette-step stepClassName='demo' palette=palette}}
@@ -76,11 +76,13 @@
 
       {{#palette-step stepClassName='permalink' palette=palette}}
         <p>Here is your palette:</p>
-        {{color-swatch swatchColor=palette.bg}}
-        {{color-swatch swatchColor=palette.highlightPrimary}}
-        {{color-swatch swatchColor=palette.highlightSecondary}}
-        {{color-swatch swatchColor=palette.textPrimary}}
-        {{color-swatch swatchColor=palette.textSecondary}}
+        {{color-swatch swatchColor=defaultPalette.primary}}
+        {{color-swatch swatchColor=defaultPalette.lightPrimary}}
+        {{color-swatch swatchColor=defaultPalette.darkPrimary}}
+        {{color-swatch swatchColor=defaultPalette.secondary}}
+        {{color-swatch swatchColor=defaultPalette.tertiary}}
+        {{color-swatch swatchColor=defaultPalette.accent}}
+        {{color-swatch swatchColor=defaultPalette.neutral}}
       {{/palette-step}}
     </div>
 </div>
